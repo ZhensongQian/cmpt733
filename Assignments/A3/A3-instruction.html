@@ -462,7 +462,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Datasets can be downloaded from <a href="https://courses.cs.sfu.ca/2016sp-cmpt-733-g2/pages/logs-features-sample">logs-features-sample</a> and <a href="https://courses.cs.sfu.ca/2016sp-cmpt-733-g2/pages/logs-features">logs-features</a>.</p>
-<p><font color="red">Note that you do not need to do feature scaling in this assignment, but you should make sure that you know how to do it (See [StandardScaler](http://spark.apache.org/docs/latest/mllib-feature-extraction.html#standardscaler) for reference). </font></p>
+<p><font color="red"> Note that you do not need to do feature scaling in this assignment, but  you should make sure that you know how to do it </font>  (See <a href="http://spark.apache.org/docs/latest/mllib-feature-extraction.html#standardscaler">StandardScaler</a>  for reference).</p>
 
 </div>
 </div>
@@ -482,7 +482,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you can see from the above feature vector, the first two dimensions in each feature vector are categorical features. For example, the first dimension can be one of the following cases: “tcp”, “udp”, or, “icmp”. You can represent these categorical features using one-hot representation. In other words, the first dimension can be replaced with [1,0,0] for “tcp”, [0,1,0] for “udp”, and [0,0,1] for “icmp”.</p>
-<p>In Task A, your job is to implement the <font color="blue">cat2Num</font> function. <font color="red">**Note that in this function, you are not allowed to convert DataFrame to an RDD.**</font></p>
+<p>In Task A, your job is to implement the <font color="blue">cat2Num</font> function. <strong><font color="red">Note that in this function, you are not allowed to convert DataFrame to an RDD.</font> </strong></p>
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">cat2Num</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">            Input: $df represents a DataFrame with two columns: &quot;id&quot; and &quot;rawFeatures&quot;</span>
@@ -510,7 +510,7 @@ div#notebook {
 <ol>
 <li><p>I heard that some of you might prefer learning more tools from the course. But, there are <a href="http://bigdata.andreamostosi.name/">hundreds</a> of big data tools available right now. You can never master all of them. My advice is to train your fast-learning ability in this fast-changing world. To achieve this, a better strategy is to always have a <a href="http://www.cs.sfu.ca/CourseCentral/732/ggbaker/other-big-data.html">big picture</a> in your mind and learn 2~3 representitive tools in depth. For example, if you know what UDF is and how to use it in SparkSQL, then you can learn much faster when you need to use <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF">UDF</a> in HIVE.</p>
 </li>
-<li><p>In Hive, UDAF is also widely used. But, as of 01/23/2016, UDAF has not been added into PySpark (<a href="https://issues.apache.org/jira/browse/SPARK-10915">SPARK-10915</a>). I suggest you to taking a look at UDAF as well, and understand when to use it.</p>
+<li><p>In Hive, UDAF is also widely used. But, as of 01/23/2016, UDAF has not been added into PySpark (<a href="https://issues.apache.org/jira/browse/SPARK-10915">SPARK-10915</a>). I suggest you taking a look at UDAF as well, and understand when to use it.</p>
 </li>
 </ol>
 
@@ -542,7 +542,7 @@ $$score(x) = \frac{N_{max}-N_{x}}{N_{max}-N_{min}}$$<p>to score $x$ as being an 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In Task B, your job is to implement the <font color="blue">addScore</font> function. <font color="red">**Note that in this function, you are not allowed to convert DataFrame to an RDD.**</font></p>
+<p>In Task B, your job is to implement the <font color="blue">addScore</font> function. <strong><font color="red">Note that in this function, you are not allowed to convert DataFrame to an RDD.</font></strong></p>
 
 </div>
 </div>
