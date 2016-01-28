@@ -618,7 +618,7 @@ $$score(x) = \frac{N_{max}-N_{x}}{N_{max}-N_{min}}$$<p>to score $x$ as being an 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>your-data-path/logs-features
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>your-data-path/stream-logs-features
 <span class="nv">$ </span>ls part-r-* <span class="p">|</span> xargs -I % sh -c <span class="s1">&#39;{ cat %; sleep 5;}&#39;</span> <span class="p">|</span> nc -lk 9999
 </pre></div>
 
@@ -630,7 +630,7 @@ $$score(x) = \frac{N_{max}-N_{x}}{N_{max}-N_{min}}$$<p>to score $x$ as being an 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The above command will change the current directory to the data directory. Then, it will start writing data to a port on your machine, file by file with a 5s pause in between iterations.</p>
+<p>The above command will change the current directory to the data directory. Then, it will start writing data to a port on your machine, file by file with a 5s pause in between iterations. Since Spark Streaming cannot read data in Parquet format, please download new datasets: <a href="https://courses.cs.sfu.ca/2016sp-cmpt-733-g2/pages/stream-logs-features-sample">stream-logs-features-sample</a> and <a href="https://courses.cs.sfu.ca/2016sp-cmpt-733-g2/pages/stream-logs-features">stream-logs-features</a> to finish this task.</p>
 
 </div>
 </div>
