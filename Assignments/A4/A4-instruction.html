@@ -564,7 +564,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>How should we evaluate an ER result? Before answering this question, let's first recall what the ER result looks like. The goal of ER is to identify all matching record pairs. Thus, the ER result should be a set of identified matching pairs, denoted by R. One thing that we want to know is that what percentage of the pairs in $R$ that are truly matching? This is what Precision can tell us. Let $T$ denote the truly matching pairs in $R$. Precision is defined as:
 $$Precision = \frac{|T|}{|R|}$$</p>
-<p>In addition to Precision, another thing that we care about is that how many matching pairs that have not been identified. This is what Recall can tell us. Let $A$ denote all the matching pairs in the entire dataset. Recall is defined as:</p>
+<p>In addition to Precision, another thing that we care about is that what percentage of truly matching pairs that are identified. This is what Recall can tell us. Let $A$ denote the truly matching pairs in the entire dataset. Recall is defined as:</p>
 $$Recall = \frac{|T|}{|A|}$$<p>There is an interesting trade-off between Precision and Recall. As more and more pairs that are identified as matching, Recall increases while Precision potentially decreases. For the extreme case, if we return all the pairs as matching pairs, we will get a perfect Recall (i.e., Recall = 100%) but precision will be the worst. Thus, to balance Precision and Recall, people often use FMeasure to evaluate an ER result:</p>
 $$FMeasure = \frac{2*Precision*Recall}{Precision+Recall}$$
 </div>
